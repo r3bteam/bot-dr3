@@ -64,7 +64,7 @@ client.on('message', async msg => { // eslint-disable-line
 
 	command = command.slice(PREFIX.length)
 
-	if (command === `play`) {
+	if (command === `p`) {
     
 		const voiceChannel = msg.member.voiceChannel;
         
@@ -164,7 +164,7 @@ ${videos.map(video2 => `[**${++index} **] \`${video2.title}\``).join('\n')}`)
 
 		}
     
-	} else if (command === `skip`) {
+	} else if (command === `ski`) {
 
 		if (!msg.member.voiceChannel) return msg.channel.send('You are not in a voice channel!');
 
@@ -174,7 +174,7 @@ ${videos.map(video2 => `[**${++index} **] \`${video2.title}\``).join('\n')}`)
 
 		return undefined;
 
-	} else if (command === `stop`) {
+	} else if (command === `s`) {
 
 		if (!msg.member.voiceChannel) return msg.channel.send('You are not in a voice channel!');
 
@@ -387,7 +387,7 @@ function play(guild, song) {
 
 
 const adminprefix = "!";
-const devs = ['402043862480322562', '280312214395813888'];
+const devs = ['402043862480322562', '424587718098419722'];
  
 
 client.on('message', message => {
@@ -438,7 +438,7 @@ if (message.content.startsWith(adminprefix + 'st')) {
 
 client.on('message', msg => {
 
-    if (msg.content == '2ادخل') {
+    if (msg.content == '!p') {
         if (msg.member.voiceChannel) {
 
      if (msg.member.voiceChannel.joinable) {
